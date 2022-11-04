@@ -64,7 +64,7 @@ conky.config = {
 
 	--Placement
 
-	alignment = 'middle_right',						-- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
+	alignment = 'top_right',					-- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
 												-- middle_left,middle_middle,middle_right,none
 	--Arch Duoscreen
 	--gap_x = -1910,
@@ -142,8 +142,8 @@ conky.config = {
 };
 
 conky.text = [[
-${color6}${voffset 4}${font GE Inspira:size=36}${alignc}${time %l}:${time %M} ${time %p}${font}${color}
-${color6}${voffset 4}${font GE Inspira:size=12}${alignc}${time %A} ${time %B} ${time %e}, ${time %Y}${font}${color}
+${color6}${voffset 4}${font GE Inspira:size=48}${alignc}${time %l}:${time %M} ${time %p}${font}${color}
+${color6}${voffset 4}${font GE Inspira:size=24}${alignc}${time %A} ${time %B} ${time %e}, ${time %Y}${font}${color}
 
 ${color5}${font Roboto:size=10}${voffset 2}S Y S T E M   ${hr 2}${font}${color}
 ${color2}${voffset 8}Hostname:${color} ${alignr}${nodename}
@@ -160,37 +160,55 @@ ${color2}${offset 30}CPU Core 1:${color} ${alignr}${offset -10}${cpu cpu1}%${ali
 ${color2}${offset 30}CPU Core 2:${color} ${alignr}${offset -10}${cpu cpu2}%${alignr}${cpubar cpu2}
 ${color2}${offset 30}CPU Core 3:${color} ${alignr}${offset -10}${cpu cpu3}%${alignr}${cpubar cpu3}
 ${color2}${offset 30}CPU Core 4:${color} ${alignr}${offset -10}${cpu cpu4}%${alignr}${cpubar cpu4}
+${color2}${offset 30}CPU Core 5:${color} ${alignr}${offset -10}${cpu cpu5}%${alignr}${cpubar cpu5}
+${color2}${offset 30}CPU Core 6:${color} ${alignr}${offset -10}${cpu cpu6}%${alignr}${cpubar cpu6}
+${color2}${offset 30}CPU Core 7:${color} ${alignr}${offset -10}${cpu cpu7}%${alignr}${cpubar cpu7}
+${color2}${offset 30}CPU Core 8:${color} ${alignr}${offset -10}${cpu cpu8}%${alignr}${cpubar cpu8}
 ${color2}Top Processes${goto 222}cpu%${goto 274}mem%${color}
-${voffset 4}     1  -  ${top name 1}${alignr}${goto 170} ${goto 222}${top cpu 1} ${goto 274}${top mem 1}
+     1  -  ${top name 1}${alignr} ${goto 170}${goto 222}${top cpu 1} ${goto 274}${top mem 1}
      2  -  ${top name 2}${alignr} ${goto 222}${top cpu 2} ${goto 274}${top mem 2}
      3  -  ${top name 3}${alignr} ${goto 222}${top cpu 3} ${goto 274}${top mem 3}
      4  -  ${top name 4}${alignr} ${goto 222}${top cpu 4} ${goto 274}${top mem 4}
      5  -  ${top name 5}${alignr} ${goto 222}${top cpu 5} ${goto 274}${top mem 5}
+     6  -  ${top name 6}${alignr} ${goto 222}${top cpu 6} ${goto 274}${top mem 6}
+     7  -  ${top name 7}${alignr} ${goto 222}${top cpu 7} ${goto 274}${top mem 7}
+     8  -  ${top name 8}${alignr} ${goto 222}${top cpu 8} ${goto 274}${top mem 8}
+     9  -  ${top name 9}${alignr} ${goto 222}${top cpu 9} ${goto 274}${top mem 9}
+     10  -  ${top name 10}${alignr} ${goto 222}${top cpu 10} ${goto 274}${top mem 10}
 ${color5}${font Roboto:size=10}M E M O R Y   ${hr 2}${font}${color}
 ${color2}${offset 30}RAM: ${color}${alignr}${offset -10}${mem} / ${memmax}${alignr}${membar}
 ${color2}${offset 30}Swap:${color} ${alignr}${offset -10}${swap} / ${swapmax}${alignr}${swapbar}
 ${color2}Top Processes${goto 222}cpu%${goto 274}mem%${color}
-${voffset 4}     1  -  ${top_mem name 1}${alignr}${goto 170} ${goto 222}${top_mem cpu 1} ${goto 274}${top_mem mem 1}
+     1  -  ${top_mem name 1}${alignr}${goto 170} ${goto 222}${top_mem cpu 1} ${goto 274}${top_mem mem 1}
      2  -  ${top_mem name 2}${alignr}${goto 170} ${goto 222}${top_mem cpu 2} ${goto 274}${top_mem mem 2}
      3  -  ${top_mem name 3}${alignr}${goto 170} ${goto 222}${top_mem cpu 3} ${goto 274}${top_mem mem 3}
      4  -  ${top_mem name 4}${alignr}${goto 170} ${goto 222}${top_mem cpu 4} ${goto 274}${top_mem mem 4}
      5  -  ${top_mem name 5}${alignr}${goto 170} ${goto 222}${top_mem cpu 5} ${goto 274}${top_mem mem 5}
+     6  -  ${top_mem name 6}${alignr}${goto 170} ${goto 222}${top_mem cpu 6} ${goto 274}${top_mem mem 6}
+     7  -  ${top_mem name 7}${alignr}${goto 170} ${goto 222}${top_mem cpu 7} ${goto 274}${top_mem mem 7}
+     8  -  ${top_mem name 8}${alignr}${goto 170} ${goto 222}${top_mem cpu 8} ${goto 274}${top_mem mem 8}
+     9  -  ${top_mem name 9}${alignr}${goto 170} ${goto 222}${top_mem cpu 9} ${goto 274}${top_mem mem 9}
+     10  -  ${top_mem name 10}${alignr}${goto 170} ${goto 222}${top_mem cpu 10} ${goto 274}${top_mem mem 10}
 ${color5}${font Roboto:size=10}D R I V E S   ${hr 2}${font}${color}
-${offset 30}${color2}Root  -  SSD:${color} ${alignr}${offset -10}${fs_used /} / ${fs_size /}${alignr}${fs_bar}
-${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/nvme0n1p2}${alignr}${diskiograph_read nvme0n1p2 8,100}
-${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/nvme0n1p2}${alignr}${diskiograph_write nvme0n1p2 8,100}
-
-${offset 30}${color2}256nvme :${color} ${alignr}${offset -10}${fs_used /home/titus/256nvme} / ${fs_size /home/titus/256nvme}${alignr}${fs_bar}
-${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/nvme1n1p1}${alignr}${diskiograph_read nvme1n1p1 8,100}
-${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/nvme1n1p1}${alignr}${diskiograph_write nvme1n1p1 8,100}
-
-${offset 30}${color2}Storage :${color} ${alignr}${offset -10}${fs_used /home/titus/1tb} / ${fs_size /home/titus/1tb}${alignr}${fs_bar /home/titus/1tb}
-${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/sda5}${alignr}${diskiograph_read sda5 8,100}
-${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/sda5}${alignr}${diskiograph_write sda5 8,100}
+${offset 30}${color2}/:${color} ${alignr}${offset -10}${fs_used /} / ${fs_size /}${alignr}${fs_bar /}
+${offset 30}${color2}  I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/nvme0n1p1}${alignr}${diskiograph_read nvme0n1p1 8,100}
+${offset 30}${color2}  I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/nvme0n1p1}${alignr}${diskiograph_write nvme0n1p1 8,100}
+${offset 30}${color2}YoctoBuild:${color} ${alignr}${offset -10}${fs_used /work/YoctoBuild} / ${fs_size /work/YoctoBuild}${alignr}${fs_bar /work/YoctoBuild}
+${offset 30}${color2}  I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/nvme1n1p1}${alignr}${diskiograph_read nvme1n1p1 8,100}
+${offset 30}${color2}  I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/nvme1n1p1}${alignr}${diskiograph_write nvme1n1p1 8,100}
+${offset 30}${color2}work2:${color} ${alignr}${offset -10}${fs_used /work2} / ${fs_size /work2}${alignr}${fs_bar /work2}
+${offset 30}${color2}  I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/sda}${alignr}${diskiograph_read sda 8,100}
+${offset 30}${color2}  I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/sda}${alignr}${diskiograph_write sda 8,100}
 ${color5}${color5}${font Roboto:size=10}N E T W O R K   ${hr 2}${font}${color}
-${color2}${offset 30}IP Address: ${color} ${alignr}${offset -10$}${addrs enp6s0}
-${color2}${offset 30}Eth Up:${color} ${alignr}${offset -10$}${upspeed enp6s0}${alignr}${upspeedgraph enp6s0 8,100}
-${color2}${offset 30}Eth Down:${color} ${alignr}${offset -10$}${downspeed enp6s0}${alignr}${downspeedgraph enp6s0 8,100}
+${color2}${offset 30}IP Address (wired): ${color} ${alignr}${offset -10$}${addrs enp68s0}
+${color2}${offset 30}Eth Up:${color} ${alignr}${offset -10$}${upspeed enp68s0}${alignr}${upspeedgraph enp68s0 8,100}
+${color2}${offset 30}Eth Down:${color} ${alignr}${offset -10$}${downspeed enp68s0}${alignr}${downspeedgraph enp68s0 8,100}
+${color2}${offset 30}IP Address (wireless): ${color} ${alignr}${offset -10$}${addrs wlo2}
+${color2}${offset 30}Eth Up:${color} ${alignr}${offset -10$}${upspeed wlo2}${alignr}${upspeedgraph wlo2 8,100}
+${color2}${offset 30}Eth Down:${color} ${alignr}${offset -10$}${downspeed wlo2}${alignr}${downspeedgraph wlo2 8,100}
+${color2}${offset 30}IP Address (IOT): ${color} ${alignr}${offset -10$}${addrs vlan101}
+${color2}${offset 30}Eth Up:${color} ${alignr}${offset -10$}${upspeed vlan101}${alignr}${upspeedgraph vlan101 8,100}
+${color2}${offset 30}Eth Down:${color} ${alignr}${offset -10$}${downspeed vlan101}${alignr}${downspeedgraph vlan101 8,100}
 #${font Roboto:size=10}N V I D I A   ${hr 2}${font}
 #${font Roboto:size=10,weight:bold}${color5}${execp  nvidia-smi --query-supported-clocks=gpu_name --format=csv,noheader}${font}
 #${font StyleBats:size=20}u${font}${offset 8}${voffset -12}GPU Temp ${alignr}${execi 60 nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader} °C
