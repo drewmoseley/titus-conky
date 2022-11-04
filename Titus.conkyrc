@@ -66,6 +66,7 @@ conky.config = {
 
 	alignment = 'top_right',					-- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
 												-- middle_left,middle_middle,middle_right,none
+
 	--Arch Duoscreen
 	--gap_x = -1910,
 	gap_x = 15,									-- pixels between right or left border
@@ -143,7 +144,7 @@ conky.config = {
 
 conky.text = [[
 ${color6}${voffset 4}${font GE Inspira:size=48}${alignc}${time %l}:${time %M} ${time %p}${font}${color}
-${color6}${voffset 4}${font GE Inspira:size=24}${alignc}${time %A} ${time %B} ${time %e}, ${time %Y}${font}${color}
+${color6}${voffset 4}${font GE Inspira:size=18}${alignc}${time %A} ${time %B} ${time %e}, ${time %Y}${font}${color}
 
 ${color5}${font Roboto:size=10}${voffset 2}S Y S T E M   ${hr 2}${font}${color}
 ${color2}${voffset 8}Hostname:${color} ${alignr}${nodename}
